@@ -203,12 +203,6 @@ class SelectBase extends Base
      */
     public function whereIn($column, array $options = array())
     {
-        // when the options are empty we skip
-        if ( empty( $options ) )
-        {
-            return $this;
-        }
-
         return $this->where($column, 'in', $options);
     }
 
